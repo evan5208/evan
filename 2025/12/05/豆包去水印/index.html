@@ -123,16 +123,16 @@
         
             
                 
-                    <style> .sidebar-logo img, .profile-avatar img, .avatar img, .side-tools-avatar img { display: none !important; } </style>
+                    <style> /* 隐藏默认头像区域（你之前需要的） */ .sidebar-logo img, .profile-avatar img, .avatar img, .side-tools-avatar img { display: none !important; } </style>
             
     
             
                 
-                    <style> /* === 🌈 全站统一渐变背景 === */ html, body { background: radial-gradient(circle at top, #f9fafb 0%, #f3f4f6 45%, #e5e7eb 100%) !important; background-color: transparent !important; }
-/* === 🔥 Redefine 所有默认白底容器必须全部透明 === */ .page, .page-container, .page-content, .content, .main-content, .redefine-main, .redefine-container, .layout, .post-page { background: transparent !important; }
-/* === ✨ 毛玻璃文章卡片效果（高质量版） === */ .article-page .post { background: rgba(255, 255, 255, 0.55) !important; backdrop-filter: blur(18px) saturate(180%); -webkit-backdrop-filter: blur(18px) saturate(180%); border-radius: 20px !important; border: 1px solid rgba(255,255,255,0.4); padding: 32px !important; box-shadow: 0 18px 45px rgba(0,0,0,0.12) !important; }
-/* 文章区上下留白 */ .article-page { padding-top: 25px !important; padding-bottom: 45px !important; }
-</style>
+                    <style> /* ========== 全站渐变柔和背景 ========== */ html, body { background: radial-gradient(circle at top, #fafafa 0%, #f4f6f9 45%, #eceff3 100%) !important; background-attachment: fixed !important; }
+/* ========== 去除所有默认白底容器 ========== */ .page, .page-container, .page-content, .content, .main-content, .redefine-main, .redefine-container, .layout, .post-page { background: transparent !important; }
+/* ========== 高质量毛玻璃文章卡片（精致版） ========== */ .article-page .post { background: rgba(255,255,255,0.55) !important; backdrop-filter: blur(20px) saturate(180%) !important; -webkit-backdrop-filter: blur(20px) saturate(180%) !important; border-radius: 20px !important; padding: 34px !important; border: 1px solid rgba(255,255,255,0.45); box-shadow: 0 18px 40px rgba(0,0,0,0.10) !important; }
+/* 文章上下留白 */ .article-page { padding-top: 30px !important; padding-bottom: 50px !important; }
+/* ========== TOC 毛玻璃样式统一 ========== */ .toc, .toc-container { background: rgba(255,255,255,0.45) !important; backdrop-filter: blur(16px) !important; border-radius: 16px !important; border: 1px solid rgba(255,255,255,0.35) !important; padding: 14px !important; } </style>
             
     
             
@@ -458,18 +458,6 @@
 				</a>
 			</div>
 			
-			
-			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/evan/2025/12/05/%E6%96%87%E7%AB%A0%E5%86%99%E4%BD%9C/">
-					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item truncate max-w-48">maskproxy-使用 gpt5.1 thinking 写作</span>
-						<span class="post-nav-item">下一篇</span>
-					</span>
-					<span class="right arrow-icon flex justify-center items-center">
-						<i class="fa-solid fa-chevron-right"></i>
-					</span>
-				</a>
-			</div>
 			
 		</div>
 		
