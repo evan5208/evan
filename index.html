@@ -118,32 +118,38 @@
         
             
                 
-                    <style> .sidebar-logo img, .profile-avatar img, .avatar img, .side-tools-avatar img { display: none !important; } </style>
+                    <style>.sidebar-logo img, .profile-avatar img, .avatar img, .side-tools-avatar img { display: none !important; } .sidebar-logo { height: auto !important; }</style>
+            
+    
             
     
             
                 
-                    <style> /* =============================== 🌈 全站统一柔和渐变背景（最终版） =============================== */
-html, body { background: none !important; }
-body::before, .layout::before, .redefine-container::before, .page::before, .page-container::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(circle at top, #fafafa 0%, #f4f6f9 45%, #e9ecf2 100%); background-attachment: fixed; }
-/* 去除默认白色背景 */ .page, .page-container, .page-content, .content, .main-content, .post-page { background: transparent !important; }
-/* =============================== ✨ 毛玻璃文章卡片（高级版） =============================== */ .article-page .post { background: rgba(255, 255, 255, 0.55) !important; backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border-radius: 20px !important; border: 1px solid rgba(255,255,255,0.45); padding: 34px !important; box-shadow: 0 18px 40px rgba(0,0,0,0.10) !important; }
-.article-page { padding-top: 30px !important; padding-bottom: 50px !important; } </style>
-            
-    
-            
-                
-                    <style> /* 隐藏默认头像（保留你原来的需求） */ .sidebar-logo img, .profile-avatar img, .avatar img, .side-tools-avatar img { display: none !important; } </style>
-            
-    
-            
-                
-                    <style> /* =============================== 🌈 全站统一柔和渐变背景 =============================== */
-html, body { background: none !important; }
-body::before, .layout::before, .redefine-container::before, .page::before, .page-container::before { content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(circle at top, #fafafa 0%, #f4f6f9 45%, #e9ecf2 100%); background-attachment: fixed; }
-/* 去掉中间那块纯白大底，让背景透出来 */ .page, .page-container, .page-content, .content, .main-content, .post-page { background: transparent !important; }
-/* =============================== ✨ 文章正文卡片：毛玻璃 + 阴影 =============================== */ .article-page .post { background: rgba(255, 255, 255, 0.55) !important; backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border-radius: 20px !important; border: 1px solid rgba(255,255,255,0.45); padding: 34px !important; box-shadow: 0 18px 40px rgba(0,0,0,0.10) !important; }
-.article-page { padding-top: 30px !important; padding-bottom: 50px !important; } </style>
+                    <style>
+/* 隐藏左上角头像/Logo */
+.sidebar-logo img, .profile-avatar img, .avatar img, .side-tools-avatar img {
+  display: none !important;
+}
+.sidebar-logo { height: auto !important; }
+
+/* 首页文章卡片美化 */
+.redefine-home .post-card {
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(15,23,42,0.10);
+  border: none;
+  transition: all .2s ease-out;
+}
+.redefine-home .post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(15,23,42,0.18);
+}
+
+/* 整体背景渐变 */
+body {
+  background: radial-gradient(circle at top, #f9fafb 0, #f3f4f6 45%, #e5e7eb 100%);
+}
+</style>
+
             
     
 
@@ -173,7 +179,7 @@ body::before, .layout::before, .redefine-container::before, .page::before, .page
 
     <script id="hexo-configurations">
     window.config = {"hostname":"evan5208.github.io","root":"/evan/","language":"zh-CN"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.6,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.0rem","h2":"2.4rem","h3":"2.0rem","h4":"1.7rem","h5":"1.5rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":null,"skip_dirs":[]}},"colors":{"primary":"#2563eb","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":false,"preloader":{"enable":false,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":null,"description":"这里是Evan的个人博客"},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":false,"style":"fixed","image":{"light":null,"dark":null},"title":"Evan的小破站","subtitle":{"text":[],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#ffffff","dark":"#f0f0f0"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.4rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{},"qrs":{}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.5","navbar":{"auto_hide":false,"color":{"left":"#2563eb","right":"#7c3aed","transparency":18},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":60,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2023/12/05 00:00:00"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.6,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.0rem","h2":"2.4rem","h3":"2.0rem","h4":"1.7rem","h5":"1.5rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":null,"skip_dirs":[]}},"colors":{"primary":"#2563eb","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":false,"preloader":{"enable":false,"custom_message":null},"side_tools":{"gear_rotation":true,"auto_expand":false},"open_graph":{"enable":true,"image":null,"description":"这里是Evan的个人博客"},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/img/home-banner-light.jpg","dark":"/img/home-banner-dark.jpg"},"title":"Evan的小破站","subtitle":{"text":["记录一点技术","记录一点工作","偶尔写点生活"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#ffffff","dark":"#f0f0f0"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.4rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.5","navbar":{"auto_hide":false,"color":{"left":"#2563eb","right":"#7c3aed","transparency":18},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":0,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2023/12/05 00:00:00"};
     window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
     window.data = {"masonry":false};
   </script>
@@ -209,11 +215,149 @@ body::before, .layout::before, .redefine-container::before, .page::before, .page
 <main class="page-container" id="swup">
 
 	
+	
+    <style>
+        .home-banner-container {
+            background: none !important;
+        }
+        .home-article-item,
+        .sidebar-links,
+        .sidebar-content,
+        a.page-number,
+        a.extend,
+        .sidebar-links .links:hover,
+        .right-bottom-tools,
+        footer.footer {
+            background-color: var(--background-color-transparent-80) !important;
+        }
+        .right-bottom-tools:hover,
+        a.page-number:hover,
+        a.extend:hover {
+            background-color: var(--primary-color) !important;
+        }
+        .site-info,
+        .home-article-sticky-label {
+            background-color: var(--background-color-transparent-15) !important;
+        }
+        .home-article-sticky-label {
+            backdrop-filter: none !important;
+        }
+    </style>
+    <div class="home-banner-background transition-fade fixed top-0 left-0 w-screen h-screen scale-125 sm:scale-110 box-border will-change-transform bg-cover">
+        <img src="/evan/img/home-banner-light.jpg" alt="home-banner-background" class="w-full h-full object-cover dark:hidden">
+        <img src="/evan/img/home-banner-dark.jpg" alt="home-banner-background" class="w-full h-full object-cover hidden dark:block">
+    </div>
+
+
+<div class="home-banner-container flex justify-center items-center transition-fade relative">
+    
+    <div class="content mt-8 flex flex-col justify-center items-center transition-fade-down">
+        <div class="description flex flex-col justify-center items-center w-screen font-medium text-center"
+        
+        >
+            Evan的小破站
+            
+            
+                <p><i id="subtitle"></i></p>
+            
+        </div>
+        
+    </div>
+    <script>
+        const scrollToMain = ()=> {
+            console.log('scroll');
+            const target = document.querySelector('.main-content-container');
+            target.scrollIntoView({ behavior: 'smooth'});
+        }
+
+        // QR code mobile interaction handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const qrToggleItems = document.querySelectorAll('.qr-toggle-item');
+            let activeQrItem = null;
+
+            // Handle QR code toggle for mobile
+            qrToggleItems.forEach(item => {
+                const trigger = item.querySelector('.qr-trigger');
+                const popup = item.querySelector('.qr-popup');
+
+                // Add click event for mobile
+                trigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Close any other open QR codes
+                    qrToggleItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('qr-active');
+                        }
+                    });
+
+                    // Toggle current QR code
+                    const isActive = item.classList.contains('qr-active');
+                    if (isActive) {
+                        item.classList.remove('qr-active');
+                        activeQrItem = null;
+                    } else {
+                        item.classList.add('qr-active');
+                        activeQrItem = item;
+                    }
+                });
+
+                // Remove focus styles on blur for mobile
+                trigger.addEventListener('blur', function() {
+                    // Small delay to allow for potential click events
+                    setTimeout(() => {
+                        if (activeQrItem !== item) {
+                            item.classList.remove('qr-active');
+                        }
+                    }, 100);
+                });
+            });
+
+            // Close QR codes when clicking outside
+            document.addEventListener('click', function(e) {
+                const isQrElement = e.target.closest('.qr-toggle-item');
+                if (!isQrElement && activeQrItem) {
+                    activeQrItem.classList.remove('qr-active');
+                    activeQrItem = null;
+                }
+            });
+        });
+    </script>
+    <style>
+        /* Mobile-specific QR code styles */
+        .qr-toggle-item.qr-active .qr-popup {
+            visibility: visible !important;
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        
+        /* Prevent button from staying in focus/hover state on mobile */
+        @media (hover: none) and (pointer: coarse) {
+            .qr-toggle-item:focus,
+            .qr-toggle-item:hover {
+                background-color: transparent;
+            }
+            
+            .qr-toggle-item .qr-trigger:focus,
+            .qr-toggle-item .qr-trigger:hover {
+                background-color: transparent;
+                color: inherit;
+            }
+            
+            /* Only show active state when explicitly toggled */
+            .qr-popup {
+                visibility: hidden !important;
+                opacity: 0 !important;
+            }
+        }
+    </style>
+</div>
+	
 
 	<div class="main-content-container flex flex-col justify-between min-h-dvh">
 		<div class="main-content-header">
 			<header class="navbar-container px-6 md:px-12">
-    <div class="navbar-content transition-navbar ">
+    <div class="navbar-content transition-navbar has-home-banner">
         <div class="left">
             
             <a class="logo-title" href="/evan/">
@@ -362,59 +506,6 @@ body::before, .layout::before, .redefine-container::before, .page::before, .page
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
-                        <a href="/evan/2025/12/05/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%84%9A%E6%9C%AC/">
-                            代理软件下载
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            以下是常用客户端的下载直链，点击代码块右上角的按钮即可一键复制。
-Windows &amp; Android 代理...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Dec 05 2025 18:00:00 GMT+0800">
-                
-                    2025-12-05
-                
-            </span>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/evan/tags/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7/">代理工具</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/evan/2025/12/05/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%84%9A%E6%9C%AC/">阅读全文<span class="seo-reader-text">代理软件下载</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
                         <a href="/evan/2025/12/05/%E8%8A%82%E7%82%B9/">
                             自用节点（12.5 更新）
                         </a>
@@ -467,6 +558,61 @@ Windows &amp; Android 代理...
                 
                 <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
                     <h3 class="home-article-title">
+                        <a href="/evan/2025/12/05/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%84%9A%E6%9C%AC/">
+                            代理软件下载
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            以下是常用客户端的下载直链，点击代码块右上角的按钮即可一键复制。
+Windows &amp; Android 代理客户端一键下载与安装教程（2025）本文整理了常用的 Windows 和 Android 端代理工具下载链接，并附上最基础的安装、导入订阅思路，方便一键复制粘贴使用。你只需要准备好自己的节点 &#x2F; 订阅链接，按步骤操作即可。
+
+⚠️ 提醒：请在遵守所在地区法律和网站使用条...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Dec 05 2025 18:00:00 GMT+0800">
+                
+                    2025-12-05
+                
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/evan/tags/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7/">代理工具</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/evan/2025/12/05/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%84%9A%E6%9C%AC/">阅读全文<span class="seo-reader-text">代理软件下载</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
                         <a href="/evan/2025/12/05/%E8%B1%86%E5%8C%85%E5%8E%BB%E6%B0%B4%E5%8D%B0/">
                             豆包图片无水印教程
                         </a>
@@ -475,7 +621,10 @@ Windows &amp; Android 代理...
                     <div class="home-article-content markdown-body">
                         
                             
-                            1.豆包 app本质上是一个浏览器先再豆包app里安装油猴插件1https://chromewebstore.go...
+                            1.豆包 app本质上是一个浏览器先再豆包app里安装油猴插件1https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source=ext_sidebar
+
+2.油猴插件装好之后点击添加新脚本点击下载节点文件
+3.把豆包文件拖进去安装4...
                         
                     </div>
 
@@ -527,7 +676,8 @@ Windows &amp; Android 代理...
                     <div class="home-article-content markdown-body">
                         
                             
-                            复查文章：从“真实用户”和“Google SEO”两个角度，评估这篇是不是真的解决问题、有不有实用价值。根据以上结...
+                            复查文章：从“真实用户”和“Google SEO”两个角度，评估这篇是不是真的解决问题、有不有实用价值。根据以上结论，对“is rotating thousands of IPs practical for near-real-time scraping?（这里更换标题）“这篇文章进行加固，在原文的基础上，不要乱改
+reddit 上有关（proxy ip 这里更换主题） 的讨论，帮我收集一些...
                         
                     </div>
 
@@ -644,6 +794,10 @@ Windows &amp; Android 代理...
         
         
             
+                
+        
+                
+        
         
     </div>  
 </footer>
