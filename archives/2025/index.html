@@ -118,15 +118,15 @@
         
             
                 
-                    <style>.sidebar-logo img, .profile-avatar img, .avatar img, .side-tools-avatar img { display: none !important; }</style>
+                    <style> .sidebar-logo img, .profile-avatar img, .avatar img, .side-tools-avatar img {  display: none !important;  } </style>
             
     
             
                 
-                    <style> /* 🌈 全站统一柔和渐变背景 */ body { background: radial-gradient(circle at top, #f9fafb 0, #f3f4f6 45%, #e5e7eb 100%) !important; }
-/* 🌟 文章页毛玻璃悬浮卡片 */ .article-page .post { background: rgba(255, 255, 255, 0.55) !important; box-shadow: 0 12px 35px rgba(0,0,0,0.10) !important; backdrop-filter: blur(15px) saturate(180%); -webkit-backdrop-filter: blur(15px) saturate(180%); border-radius: 18px !important; padding: 28px !important; border: 1px solid rgba(255,255,255,0.4); }
-/* 文章区域整体留白 */ .article-page { padding-top: 20px !important; padding-bottom: 40px !important; }
-/* 内容宽度更协调 */ .article-page .post-content { font-size: 17px; line-height: 1.7; } </style>
+                    <style> /* === 全站统一渐变背景（强制覆盖所有白底） === */ html, body { background: radial-gradient(circle at top, #f9fafb 0%, #f3f4f6 45%, #e5e7eb 100%) !important; background-color: transparent !important; }
+/* 覆盖主题默认白底容器 */ .redefine-body, .redefine-container, .redefine-main, .main-content, #content, .layout, .page, .post-page { background: transparent !important; }
+/* === 🌟 毛玻璃文章卡片 === */ .article-page .post { background: rgba(255, 255, 255, 0.55) !important; backdrop-filter: blur(15px) saturate(180%); -webkit-backdrop-filter: blur(15px) saturate(180%); border-radius: 18px !important; padding: 28px !important; border: 1px solid rgba(255,255,255,0.4); box-shadow: 0 12px 35px rgba(0,0,0,0.10) !important; }
+/* 文章整体留白 */ .article-page { padding-top: 20px !important; padding-bottom: 40px !important; } </style>
             
     
             
